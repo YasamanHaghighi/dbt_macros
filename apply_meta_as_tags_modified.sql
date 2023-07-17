@@ -151,7 +151,7 @@
     {% else %}
         {{ log('Setting tag value for '+tag_name+' to value '+desired_tag_value, info=True) }}
         {%- call statement('main', fetch_result=True) -%}
-            alter table {{table_name}} set tag {{tag_name}} = '{{desired_tag_value}}'
+            alter table {{table_name}} set tag {{tag_schema_full}}.{{tag_name}} = '{{desired_tag_value}}'
         {%- endcall -%}
         {{ log(load_result('main').data, info=True) }}
     {% endif %}
