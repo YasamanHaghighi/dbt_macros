@@ -14,7 +14,7 @@
             {%- set model_alias = res.node.alias -%}
 
             --added this part
-            {%- set tag_database = 'yasaman_governance' -%}
+            {%- set tag_database = 'governance' -%}
             {%- set tag_schema = 'tags' -%}
             {%- set tag_schema_full = tag_database+'.'+tag_schema -%}
             --added this part
