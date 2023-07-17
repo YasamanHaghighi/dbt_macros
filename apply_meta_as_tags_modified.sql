@@ -13,11 +13,11 @@
             {%- set model_schema_full = model_database+'.'+model_schema -%}
             {%- set model_alias = res.node.alias -%}
 
-            --added this part
+            --modified part, change names accordingly
             {%- set tag_database = 'governance' -%}
             {%- set tag_schema = 'tags' -%}
             {%- set tag_schema_full = tag_database+'.'+tag_schema -%}
-            --added this part
+
 
             {%- call statement('set_database', fetch_result=True) -%}
                 USE DATABASE {{model_database}}
